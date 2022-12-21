@@ -28,11 +28,6 @@ func main() {
 	}
 }
 
-// ASCIICodeCapA   = int('A') // 65
-// ASCIICodeCapZ   = int('Z') // 90
-// ASCIICodeLowerA = int('a') // 97
-// ASCIICodeLowerZ = int('z') // 122
-
 func part1(input string) int {
 	parsedInput := parseInput(input)
 	total := 0
@@ -42,7 +37,6 @@ func part1(input string) int {
 		intersection := intersect.Hash(compartment1, compartment2)
 		total += getPriority(fmt.Sprintf("%v", intersection[0]))
 	}
-	fmt.Println(cast.ASCIICodeCapZ)
 	return total
 }
 

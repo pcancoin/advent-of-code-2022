@@ -27,7 +27,6 @@ func main() {
 }
 
 func part1(input string) int {
-	// fmt.Println(parseInput(input))
 	total := 0
 	for _, shifts := range parseInput(input) {
 		total += checkOverlap1(shifts)

@@ -117,13 +117,10 @@ func (e Sign) String() string {
 
 func computeScore1(hand []Sign) int {
 	if hand[1] == Rock && hand[0] == Scissors || hand[1] == Scissors && hand[0] == Paper || hand[1] == Paper && hand[0] == Rock {
-		// fmt.Println(fmt.Sprintf("%s %s %d", hand[0].String(), hand[1].String(), 6+signToValue(hand[1])))
 		return 6 + signToValue(hand[1])
 	} else if hand[0] == hand[1] {
-		// fmt.Println(fmt.Sprintf("%s %s %d", hand[0].String(), hand[1].String(), 3+signToValue(hand[1])))
 		return 3 + signToValue(hand[1])
 	} else {
-		// fmt.Println(fmt.Sprintf("%s %s %d", hand[0].String(), hand[1].String(), signToValue(hand[1])))
 		return signToValue(hand[1])
 	}
 }
